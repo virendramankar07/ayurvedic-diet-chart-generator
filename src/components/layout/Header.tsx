@@ -68,13 +68,13 @@ const Header = ({ isLoggedIn = false, onLogout }: HeaderProps) => {
             {isLoggedIn ? (
               <div className="flex items-center gap-3">
                 <Link to="/dashboard">
-                  <Button variant="outline" size="sm">
+                  <Button variant="default" size="sm">
                     Dashboard
                   </Button>
                 </Link>
                 <Button
                   variant="ghost"
-                  size="icon"
+                  size="sm"
                   onClick={onLogout}
                   className="text-primary-foreground/80 hover:text-primary-foreground hover:bg-primary-foreground/10"
                 >
@@ -83,7 +83,7 @@ const Header = ({ isLoggedIn = false, onLogout }: HeaderProps) => {
               </div>
             ) : (
               <Link to="/login">
-                <Button variant="outline" size="sm" className="gap-2">
+                <Button variant="default" size="sm" className="gap-2">
                   <User className="h-4 w-4" />
                   Doctor Login
                 </Button>
@@ -138,7 +138,7 @@ const Header = ({ isLoggedIn = false, onLogout }: HeaderProps) => {
                     to="/dashboard"
                     onClick={() => setMobileMenuOpen(false)}
                   >
-                    <Button variant="secondary" className="w-full">
+                    <Button variant="default" className="w-full">
                       Dashboard
                     </Button>
                   </Link>
@@ -156,7 +156,7 @@ const Header = ({ isLoggedIn = false, onLogout }: HeaderProps) => {
                 </>
               ) : (
                 <Link to="/login" onClick={() => setMobileMenuOpen(false)}>
-                  <Button variant="secondary" className="w-full">
+                  <Button variant="default" className="w-full">
                     <User className="h-4 w-4 mr-2" />
                     Doctor Login
                   </Button>
